@@ -634,7 +634,7 @@ webglue.MeshBuilder.prototype.draw = function() {
     gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, this.indexBuffer, gl.STATIC_DRAW);
     this.committedIndexCount = this.indexCount;
   }
-  gl.drawElements(gl.TRIANGLES, this.indexCount, gl.UNSIGNED_SHORT, 0);
+  gl.drawElements(this.mode, this.indexCount, gl.UNSIGNED_SHORT, 0);
 };
 
 webglue.MeshBuilder.prototype.end = webglue.MeshBuilder.prototype.draw;
